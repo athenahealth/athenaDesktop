@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitions revision="1.0" schemaVersion="1.0">
+  <policyNamespaces>
+    <target prefix="athenadesktop" namespace="athenahealth.athenaDesktop" />
+    <using prefix="windows" namespace="Microsoft.Policies.Windows" />
+  </policyNamespaces>
+  <supersededAdm fileName="" />
+  <resources minRequiredRevision="1.0" />
+  <categories>
+    <category
+      name="athenadesktop"
+      displayName="$(string.athenadesktop_name)"></category>
+  </categories>
+
+  <policies>
+    <policy
+      name="pdfviewer"
+      valueName="UseExternalPdfViewer"
+      class="Both"
+      displayName="$(string.athenadesktop_pdfviewer_name)"
+      explainText="$(string.athenadesktop_pdfviewer_explain)"
+      key="Software\Policies\athenaDesktop">
+      <parentCategory ref="athenadesktop" />
+      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <enabledValue><decimal value="1"></decimal></enabledValue>
+      <disabledValue><decimal value="0"></decimal></disabledValue>
+    </policy>
+
+    <policy
+      name="developertools"
+      valueName="DeveloperToolsEnabled"
+      class="Both"
+      displayName="$(string.athenadesktop_developertools_name)"
+      explainText="$(string.athenadesktop_developertools_explain)"
+      key="Software\Policies\athenaDesktop">
+      <parentCategory ref="athenadesktop" />
+      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <enabledValue><decimal value="1"></decimal></enabledValue>
+      <disabledValue><decimal value="0"></decimal></disabledValue>
+    </policy>
+
+    <policy
+      name="showeula"
+      valueName="ShowEula"
+      class="Both"
+      displayName="$(string.athenadesktop_showeula_name)"
+      explainText="$(string.athenadesktop_showeula_explain)"
+      key="Software\Policies\athenaDesktop">
+      <parentCategory ref="athenadesktop" />
+      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <enabledValue><decimal value="1"></decimal></enabledValue>
+      <disabledValue><decimal value="0"></decimal></disabledValue>
+    </policy>
+
+    <policy
+      name="customenvironments"
+      valueName="CustomEnvironmentsEnabled"
+      class="Both"
+      displayName="$(string.athenadesktop_customenvironments_name)"
+      explainText="$(string.athenadesktop_customenvironments_explain)"
+      key="Software\Policies\athenaDesktop"
+      presentation="$(presentation.athenadesktop_customenvironments_presentation)">
+      <parentCategory ref="athenadesktop" />
+      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <enabledValue><decimal value="1"></decimal></enabledValue>
+      <disabledValue><decimal value="0"></decimal></disabledValue>
+      <elements>
+        <boolean
+          id="clienttrain"
+          key="Software\Policies\athenaDesktop"
+          valueName="ClientTrainEnvironmentEnabled">
+          <trueValue><decimal value="1"></decimal></trueValue>
+          <falseValue><decimal value="0"></decimal></falseValue>
+        </boolean>
+        <boolean
+          id="preview"
+          key="Software\Policies\athenaDesktop"
+          valueName="PreviewEnvironmentEnabled">
+          <trueValue><decimal value="1"></decimal></trueValue>
+          <falseValue><decimal value="0"></decimal></falseValue>
+        </boolean>
+        <boolean
+          id="prodmirror"
+          key="Software\Policies\athenaDesktop"
+          valueName="ProdMirrorEnvironmentEnabled">
+          <trueValue><decimal value="1"></decimal></trueValue>
+          <falseValue><decimal value="0"></decimal></falseValue>
+        </boolean>
+        <boolean
+          id="prodsupport"
+          key="Software\Policies\athenaDesktop"
+          valueName="ProdSupportEnvironmentEnabled">
+          <trueValue><decimal value="1"></decimal></trueValue>
+          <falseValue><decimal value="0"></decimal></falseValue>
+        </boolean>
+        <boolean
+          id="salesdemo"
+          key="Software\Policies\athenaDesktop"
+          valueName="SalesDemoEnvironmentEnabled">
+          <trueValue><decimal value="1"></decimal></trueValue>
+          <falseValue><decimal value="0"></decimal></falseValue>
+        </boolean>
+      </elements>
+    </policy>
+
+    <policy
+      name="customenvironmentsui"
+      valueName="CustomEnvironmentsUIEnabled"
+      class="Both"
+      displayName="$(string.athenadesktop_customenvironmentsui_name)"
+      explainText="$(string.athenadesktop_customenvironmentsui_explain)"
+      key="Software\Policies\athenaDesktop">
+      <parentCategory ref="athenadesktop" />
+      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <enabledValue><decimal value="1"></decimal></enabledValue>
+      <disabledValue><decimal value="0"></decimal></disabledValue>
+    </policy>
+
+    <policy
+      name="ssoenabled"
+      valueName="SSOEnabled"
+      class="Both"
+      displayName="$(string.athenadesktop_sso_name)"
+      explainText="$(string.athenadesktop_sso_explain)"
+      key="Software\Policies\athenaDesktop"
+      presentation="$(presentation.athenadesktop_sso_presentation)">
+      <parentCategory ref="athenadesktop" />
+      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <enabledValue><decimal value="1"></decimal></enabledValue>
+      <disabledValue><decimal value="0"></decimal></disabledValue>
+      <elements>
+        <text id="loginpageurl_prompt" valueName="LoginPageUrl" required="true" expand="true" />
+        <text id="whitelisteddomains_prompt" valueName="WhitelistedDomains" required="false" expand="true" />
+      </elements>
+    </policy>
+
+    <policy
+      name="backup"
+      valueName="BackupEnvironmentEnabled"
+      class="Both"
+      displayName="$(string.athenadesktop_backup_name)"
+      explainText="$(string.athenadesktop_backup_explain)"
+      key="Software\Policies\athenaDesktop">
+      <parentCategory ref="athenadesktop" />
+      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <enabledValue><decimal value="1"></decimal></enabledValue>
+      <disabledValue><decimal value="0"></decimal></disabledValue>
+    </policy>
+
+  </policies>
+  
+</policyDefinitions>

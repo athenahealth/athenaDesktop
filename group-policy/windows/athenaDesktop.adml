@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName>athenaDesktop</displayName>
+  <description></description>
+  <resources>
+
+    <stringTable>
+      <string id="athenadesktop_name">athenaDesktop</string>
+      <string id="athenadesktop_pdfviewer_name">Use External PDF Viewer</string>
+      <string id="athenadesktop_pdfviewer_explain">If this policy is Enabled, PDFs will open in an external viewer. If this policy is set to Disabled or Not Configured, PDFs will open in the built-in viewer.</string>
+      <string id="athenadesktop_developertools_name">Developer Tools</string>
+      <string id="athenadesktop_developertools_explain">Enables or disables Chrome Developer Tools in athenaDesktop.</string>
+      <string id="athenadesktop_showeula_name">Show EULA on Installation</string>
+      <string id="athenadesktop_showeula_explain">If this policy is Enabled or Not Configured, the End User License Agreement will be shown upon installation and first start-up of the application.
+
+If this policy is Disabled, the End User License Agreement will not be shown upon first start up. The End User License Agreement can be found by navigating to the "About" page in athenaDesktop. By choosing Disabled, you are accepting the End User License Agreement on behalf of all users in your organization that this policy is applied to.</string>
+      <string id="athenadesktop_customenvironments_name">Custom Environments</string>
+      <string id="athenadesktop_customenvironments_explain">Enables other athenahealth environments. Users will be able to open selected Environments from the "more" menu under "Environment".</string>
+      <string id="athenadesktop_customenvironmentsui_name">Enable Creating Custom Environments</string>
+      <string id="athenadesktop_customenvironmentsui_explain">Enables users to add custom environments from the Settings page within athenaDesktop. If this policy is Disabled or Not Configured, users will not be able to create custom environments.</string>
+      <string id="athenadesktop_sso_name">Single Sign-On (SSO)</string>
+      <string id="athenadesktop_sso_explain">Set up single sign-on (SSO) for athenaDesktop.
+
+(1) Set your users' login page to allow for SSO into athenaNet.
+
+(2) Add a set of whitelisted domains for SSO. By default, athenaDesktop only allows a small set of domains to be accessed. For SSO into athenaNet, it may be necessary to whitelist some domains.
+      </string>
+      <string id="athenadesktop_backup_name">Backup Environment</string>
+      <string id="athenadesktop_backup_explain">Allows the user to open a read-only backup environment in athenaDesktop. If this policy is Enabled or Not Configured, the backup environment will be visible in the "more" menu under "Environment". If Disabled, the environment will not be visible.</string>
+    </stringTable>
+
+    <presentationTable>
+      <presentation id="athenadesktop_updatetrack_presentation">
+        <dropdownList refId="athenadesktop_updatetrack_dropdown" defaultItem="0"></dropdownList>
+      </presentation>
+      <presentation id="athenadesktop_customenvironments_presentation">
+        <checkBox refId="clienttrain">Client Train</checkBox>
+        <checkBox refId="preview">Preview</checkBox>
+        <text></text><text>Internal only</text>
+        <checkBox refId="prodmirror">Prodmirror</checkBox>
+        <checkBox refId="prodsupport">Prodsupport</checkBox>
+        <checkBox refId="salesdemo">Sales Demo</checkBox>
+      </presentation>
+      <presentation id="athenadesktop_sso_presentation">
+        <textBox refId="loginpageurl_prompt">
+          <label>(1) Enter the Login Page URL below. Please include the protocol, for example: https://athenanet.athenahealth.com.</label>
+        </textBox>
+        <textBox refId="whitelisteddomains_prompt">
+          <label>(2) Enter a set of whitelisted domains for SSO below. These should be comma separated, for example: mySSOloginpage.athenahealth.com,anotherSSOpage.com.</label>
+        </textBox>
+      </presentation>
+    </presentationTable>
+
+  </resources>
+</policyDefinitionResources>
