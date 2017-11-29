@@ -26,15 +26,3 @@ To install a .reg patch, just double-click the .reg file. You can also File->Imp
 
 1. Download the policies.json file from athena-desktop-group-policy/mac
 2. Copy the file to `~/Library/Application Support/athenaDesktop`
-
-## Configuring policies.json
-
-### Update Track
-
-The following settings control the update track:
-
-```javascript
-"UpdateTrack": "... see below ...",
-```
-
-Valid values for `UpdateTrack` are `"candidate"`, `"preview"`, `"stable"`, and `"delayed"`.
