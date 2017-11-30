@@ -14,5 +14,5 @@
 
 ## Installing policies.json
 
-1. Download the policies.json file from athena-desktop-group-policy/mac
+1. Download the policies.json file from athenaDesktop/group-policy/mac
 2. Copy the file to `~/Library/Application Support/athenaDesktop`
