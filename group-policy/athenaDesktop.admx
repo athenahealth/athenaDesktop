@@ -134,19 +134,6 @@
       </elements>
     </policy>
 
-    <policy
-      name="backup"
-      valueName="BackupEnvironmentEnabled"
-      class="Both"
-      displayName="$(string.athenadesktop_backup_name)"
-      explainText="$(string.athenadesktop_backup_explain)"
-      key="Software\Policies\athenaDesktop">
-      <parentCategory ref="athenadesktop" />
-      <supportedOn ref="windows:SUPPORTED_Windows7" />
-      <enabledValue><decimal value="1"></decimal></enabledValue>
-      <disabledValue><decimal value="0"></decimal></disabledValue>
-    </policy>
-
   </policies>
   
 </policyDefinitions>

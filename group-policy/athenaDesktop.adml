@@ -25,8 +25,6 @@ If this policy is Disabled, the End User License Agreement will not be shown upo
 
 (2) Add a set of whitelisted domains for SSO. By default, athenaDesktop only allows a small set of domains to be accessed. For SSO into athenaNet, it may be necessary to whitelist some domains.
       </string>
-      <string id="athenadesktop_backup_name">Backup Environment</string>
-      <string id="athenadesktop_backup_explain">Allows the user to open a read-only backup environment in athenaDesktop. If this policy is Enabled or Not Configured, the backup environment will be visible in the "more" menu under "Environment". If Disabled, the environment will not be visible.</string>
     </stringTable>
 
     <presentationTable>
